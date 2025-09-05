@@ -34,7 +34,7 @@ export default function Home() {
       {/* Intro Section */}
       <section className="w-full bg-gray-50 px-6 py-16 lg:py-24 flex flex-col lg:flex-row items-center gap-10">
         <div className="flex-1">
-          <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-snug">
+          <h1 className="text-3xl lg:text-3xl font-bold text-gray-900 leading-snug">
             Green Plant Energy is a dynamic global energy company with businesses and
             operations across the entire spectrum of the energy value chain.
           </h1>
