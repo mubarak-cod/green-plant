@@ -12,25 +12,25 @@ const sections = [
     title: "Environmental Responsibility",
     content:
       "We prioritize environmental stewardship by reducing emissions, conserving energy, and ensuring sustainable practices across all our operations.",
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757024743/image_tv5elb.png",
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757099890/image_at6apb.png",
   },
   {
     title: "Community Engagement",
     content:
       "Our projects actively support local communities, providing education, healthcare, and economic opportunities.",
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757024798/image_ax6ewj.png",
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757099966/image_akemhx.png",
   },
   {
     title: "Innovative Practices",
     content:
       "We leverage modern technology and innovative processes to minimize environmental impact and maximize efficiency.",
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757024859/image_vsqd6n.png",
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757100064/image_om8hqe.png",
   },
   {
     title: "Sustainable Growth",
     content:
       "Our long-term strategy ensures growth that benefits stakeholders, the environment, and the society at large.",
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757024927/image_yiqib1.png",
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757100134/image_nhmp1v.png",
   },
 ];
 
@@ -42,7 +42,7 @@ const SustainabilityPage = () => {
         {/* Hero Section */}
         <section className="w-full h-[400px] md:h-[500px] relative flex items-center justify-center bg-white">
           <Image
-            src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757024617/image_atjihn.png"
+            src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757099792/image_itxsmo.png"
             alt="Sustainability Background"
             fill
             className="object-cover"

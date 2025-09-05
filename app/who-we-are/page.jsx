@@ -10,10 +10,10 @@ export default function Home() {
         <Navbar />
     <main className="flex flex-col items-center">
       {/* Hero Section with Background Image */}
-      <section className="relative w-full h-[60vh] flex items-center justify-center">
+      <section className="relative w-full h-[90vh] flex items-center justify-center">
         {/* Background Image */}
         <Image
-          src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757022798/image_kw1qct.png" 
+          src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757100990/image_zegsdn.png" 
           alt="Ship background"
           fill
           priority
@@ -54,7 +54,7 @@ export default function Home() {
 
         <div className="flex-1">
           <Image
-            src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757023157/image_qvqnqm.png"
+            src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757099538/image_vss3js.png"
             alt="NNPC fuel station"
             width={600}
             height={400}
@@ -68,7 +68,7 @@ export default function Home() {
   <div className="p-4 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 bg-gradient-to-b from-green-50 to-white">
     <h3 className="text-green-700 font-semibold text-lg mb-2">Our Vision</h3>
     <Image
-      src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757023225/image_qcmyvo.png"
+      src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757099301/image_nzitpu.png"
       alt="Vision solar"
       width={400}
       height={200}
@@ -82,7 +82,7 @@ export default function Home() {
   <div className="p-4 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 bg-gradient-to-b from-green-50 to-white">
     <h3 className="text-green-700 font-semibold text-lg mb-2">Our Mission</h3>
     <Image
-      src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757023312/image_mdowin.png"
+      src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757099388/image_ujgda3.png"
       alt="Mission solar"
       width={400}
       height={200}
@@ -97,7 +97,7 @@ export default function Home() {
   <div className="p-4 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 bg-gradient-to-b from-green-50 to-white">
     <h3 className="text-green-700 font-semibold text-lg mb-2">Our Values</h3>
     <Image
-      src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757023569/image_wv8w97.png"
+      src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757099454/image_xbcqf8.png"
       alt="Values team"
       width={400}
       height={200}
@@ -143,7 +143,7 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <Image
-            src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757023808/image_p1wojv.png"
+            src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757101093/image_gfcdwc.png"
             alt="Gas infrastructure"
             width={500}
             height={300}

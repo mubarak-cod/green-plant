@@ -23,7 +23,7 @@ export default function Home() {
       </Suspense>
        <ChatWidget
         phone="+2347039978994"            
-        welcome="Hi! I’m your AI assistant 🤖 — how can I help today?"
+        welcome="Hi! I’m your assistant 🤖 — how can I help today?"
         ctaText="Chat on WhatsApp"
         presetText="Hello! I’d like to speak with support."
       />

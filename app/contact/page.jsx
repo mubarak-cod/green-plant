@@ -18,7 +18,7 @@ export default function Contact() {
         "service_xtqiioc", 
         "template_len10g4",
         form.current,
-        "0w1FNBE-7Na5EeBz3" 
+        "0w1FNBE-7Na5EeBz3"
       )
       .then(
         () => {
@@ -37,9 +37,9 @@ export default function Contact() {
       <Navbar />
       <main className="w-full min-h-screen bg-white">
         {/* Hero */}
-        <section className="relative h-[50vh] w-full flex items-center justify-center">
+        <section className="relative h-[90vh] w-full flex items-center justify-center">
           <Image
-            src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757023897/image_g9frn1.png"
+            src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757100508/image_h56awo.png"
             alt="Contact Background"
             fill
             className="object-cover"
@@ -76,21 +76,6 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* Map */}
-        <section className="px-6 md:px-16 pb-16">
-          <div className="rounded-2xl overflow-hidden shadow-lg h-[300px] md:h-[450px]">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.8845151469!2d3.379205415318525!3d6.524379525191343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8a67b1d3f3f%3A0x7a83f9e51d4b0e3a!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1682010234567"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </section>
-
         {/* Contact Form */}
         <section className="px-6 md:px-16 pb-24">
           <div className="relative max-w-3xl mx-auto rounded-2xl shadow-xl overflow-hidden">
@@ -115,7 +100,7 @@ export default function Contact() {
                     id="user_name"
                     name="user_name"
                     placeholder="Enter your full name"
-                    className="w-full rounded-xl border border-gray-300 focus:border-white focus:ring-white px-4 py-3 text-gray-900 shadow-sm"
+                    className="w-full rounded-xl border border-gray-300 focus:border-white focus:ring-white px-4 py-3 text-white placeholder-white shadow-sm"
                     required
                   />
                 </div>
@@ -133,7 +118,7 @@ export default function Contact() {
                     id="user_email"
                     name="user_email"
                     placeholder="Enter your email"
-                    className="w-full rounded-xl border border-gray-300 focus:border-white focus:ring-white px-4 py-3 text-gray-900 shadow-sm"
+                    className="w-full rounded-xl border border-gray-300 focus:border-white focus:ring-white px-4 py-3 text-white placeholder-white shadow-sm"
                     required
                   />
                 </div>
@@ -151,7 +136,7 @@ export default function Contact() {
                     id="subject"
                     name="subject"
                     placeholder="Enter subject"
-                    className="w-full rounded-xl border border-gray-300 focus:border-white focus:ring-white px-4 py-3 text-gray-900 shadow-sm"
+                    className="w-full rounded-xl border border-gray-300 focus:border-white focus:ring-white px-4 py-3 text-white placeholder-white shadow-sm"
                     required
                   />
                 </div>
@@ -169,7 +154,7 @@ export default function Contact() {
                     name="message"
                     rows="5"
                     placeholder="Write your message here..."
-                    className="w-full rounded-xl border border-gray-300 focus:border-white focus:ring-white px-4 py-3 text-gray-900 shadow-sm"
+                    className="w-full rounded-xl border border-gray-300 focus:border-white focus:ring-white px-4 py-3 text-white placeholder-white shadow-sm"
                     required
                   ></textarea>
                 </div>

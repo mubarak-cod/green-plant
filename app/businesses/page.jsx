@@ -10,21 +10,21 @@ const businesses = [
     title: "Renewable Energy",
     description:
       "We invest in solar, wind, and hydro projects to provide sustainable power solutions across Africa and beyond.",
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757024267/image_is8v5j.png",
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757100329/image_swszuo.png",
   },
-  {
-    id: 2,
-    title: "Power Distribution",
-    description:
-      "Our state-of-the-art distribution network ensures reliable electricity access for businesses and communities.",
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757024341/image_ebwxjl.png",
-  },
+  // {
+  //   id: 2,
+  //   title: "Power Distribution",
+  //   description:
+  //     "Our state-of-the-art distribution network ensures reliable electricity access for businesses and communities.",
+  //   image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757100389/image_egw5u0.png",
+  // },
   {
     id: 3,
     title: "Innovation & Technology",
     description:
       "We leverage cutting-edge technology and smart grids to optimize energy management and efficiency.",
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757024403/image_hvbkwc.png",
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757100441/image_og28x0.png",
   },
 ];
 
@@ -35,9 +35,9 @@ export default function OurBusinesses() {
       <Nav />
       <div className="w-full">
         {/* Hero Section */}
-        <div className="relative w-full h-[80vh] flex items-center justify-center">
+        <div className="relative w-full h-[90vh] flex items-center justify-center">
           <Image
-            src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757023897/image_g9frn1.png"
+            src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757100248/image_odnmuc.png"
             alt="Our Businesses Hero"
             fill
             className="object-cover"
