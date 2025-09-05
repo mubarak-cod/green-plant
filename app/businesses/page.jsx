@@ -64,9 +64,11 @@ export default function OurBusinesses() {
                 <Image
                   src={biz.image}
                   alt={biz.title}
-                  fill
-                  className="object-cover"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto rounded-xl shadow-lg object-cover"
                 />
+
               </div>
 
               <div className="md:w-1/2 space-y-4">
