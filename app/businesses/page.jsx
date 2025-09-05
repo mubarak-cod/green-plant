@@ -30,7 +30,8 @@ const businesses = [
 
 export default function OurBusinesses() {
   return (
-    <div className="bg-white text-white">
+   <div className="bg-white text-black">
+
       <Nav />
       <div className="w-full">
         {/* Hero Section */}
