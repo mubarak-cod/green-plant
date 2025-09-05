@@ -2,12 +2,12 @@
 import { motion } from "framer-motion";
 
 const keyCities = [
-  { name: "Lagos", x: 150, y: 120 },
-  { name: "Abuja", x: 320, y: 80 },
-  { name: "Port Harcourt", x: 220, y: 200 },
-  { name: "Kano", x: 400, y: 50 },
-  { name: "Ibadan", x: 180, y: 160 },
-  { name: "Kaduna", x: 350, y: 90 },
+  { name: "Lagos", x: 18, y: 30 }, // x and y as % of width/height
+  { name: "Abuja", x: 40, y: 20 },
+  { name: "Port Harcourt", x: 27, y: 50 },
+  { name: "Kano", x: 50, y: 10 },
+  { name: "Ibadan", x: 20, y: 45 },
+  { name: "Kaduna", x: 45, y: 18 },
 ];
 
 export default function SmartMapSection() {
@@ -40,7 +40,12 @@ export default function SmartMapSection() {
           <motion.div
             key={i}
             className="absolute w-4 h-4 bg-green-400 rounded-full shadow-lg"
-            style={{ left: city.x, top: city.y }}
+            style={{
+              left: `${city.x}%`,
+              top: `${city.y}%`,
+              translateX: "-50%",
+              translateY: "-50%",
+            }}
             initial={{ scale: 0 }}
             animate={{ scale: [0, 1.5, 1] }}
             transition={{
@@ -56,11 +61,16 @@ export default function SmartMapSection() {
         {keyCities.map((city, i) => (
           <motion.div
             key={i + "-label"}
-            className="absolute text-white font-semibold bg-green-700/80 px-3 py-1 rounded-full shadow-lg"
-            style={{ left: city.x + 10, top: city.y - 10 }}
+            className="absolute text-white font-semibold bg-green-700/80 px-3 py-1 rounded-full shadow-lg whitespace-nowrap text-xs md:text-sm"
+            style={{
+              left: `${city.x}%`,
+              top: `${city.y}%`,
+              translateX: "60%",
+              translateY: "-60%",
+            }}
             animate={{
-              y: [city.y - 5, city.y + 5, city.y - 5],
-              x: [city.x + 5, city.x + 15, city.x + 5],
+              y: [`${city.y - 2}%`, `${city.y + 2}%`, `${city.y - 2}%`],
+              x: [`${city.x + 2}%`, `${city.x + 5}%`, `${city.x + 2}%`],
             }}
             transition={{
               repeat: Infinity,
@@ -73,17 +83,6 @@ export default function SmartMapSection() {
           </motion.div>
         ))}
       </div>
-
-      {/* Call to Action */}
-      {/* <motion.a
-        href="/contact"
-        className="mt-12 inline-block bg-green-500 hover:bg-green-400 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition"
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1, duration: 0.8 }}
-      >
-        Contact Us
-      </motion.a> */}
     </section>
   );
 }
