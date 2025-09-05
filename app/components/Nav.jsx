@@ -24,7 +24,7 @@ const Page = () => {
           <div className="flex items-center flex-shrink-0 space-x-3">
             <Link href="/">
               <Image
-               src="/greenlogoo.png"
+               src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757026514/greenlogoo_tuab4h.png"
                 alt="Logo"
                 width={120}
                 height={120}

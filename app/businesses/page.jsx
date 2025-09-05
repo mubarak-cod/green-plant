@@ -30,53 +30,53 @@ const businesses = [
 
 export default function OurBusinesses() {
   return (
-    <div>
-        <Nav />
-    <div className="w-full">
-      {/* Hero Section */}
-      <div className="relative w-full h-[80vh] flex items-center justify-center">
-        <Image
-          src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757023897/image_g9frn1.png"
-          alt="Our Businesses Hero"
-          fill
-          className="object-cover"
+    <div className="bg-white text-white">
+      <Nav />
+      <div className="w-full">
+        {/* Hero Section */}
+        <div className="relative w-full h-[80vh] flex items-center justify-center">
+          <Image
+            src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757023897/image_g9frn1.png"
+            alt="Our Businesses Hero"
+            fill
+            className="object-cover"
           />
-        <div className="absolute inset-0 bg-black/50"></div>
-        <h1 className="relative text-white text-5xl md:text-6xl font-bold text-center drop-shadow-lg">
-          Our Businesses
-        </h1>
-      </div>
-
-      {/* Businesses Sections */}
-      <div className="max-w-7xl mx-auto px-6 py-16 space-y-24">
-        {businesses.map((biz, index) => (
-            <motion.div
-            key={biz.id}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
-            className={`flex flex-col ${
-                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            } items-center gap-8`}
-            >
-            <div className="md:w-1/2 relative h-64 md:h-96 rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src={biz.image}
-                alt={biz.title}
-                fill
-                className="object-cover"
-                />
-            </div>
-            <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-4">{biz.title}</h2>
-              <p className="text-gray-700 text-lg">{biz.description}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-    <Footer />
+          <div className="absolute inset-0 bg-black/40"></div>
+          <h1 className="relative text-white text-5xl md:text-6xl font-bold text-center drop-shadow-lg">
+            Our Businesses
+          </h1>
         </div>
+
+        {/* Businesses Sections */}
+        <div className="max-w-7xl mx-auto px-6 py-16 space-y-24">
+          {businesses.map((biz, index) => (
+            <motion.div
+              key={biz.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className={`flex flex-col ${
+                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              } items-center gap-8`}
+            >
+              <div className="md:w-1/2 relative h-64 md:h-96 rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src={biz.image}
+                  alt={biz.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="md:w-1/2 space-y-4">
+                <h2 className="text-3xl font-bold text-black">{biz.title}</h2>
+                <p className="text-black text-lg">{biz.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+      <Footer />
+    </div>
   );
 }
