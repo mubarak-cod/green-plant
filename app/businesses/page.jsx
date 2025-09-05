@@ -30,7 +30,7 @@ const businesses = [
 
 export default function OurBusinesses() {
   return (
-   <div className="bg-white text-black">
+    <div className="bg-white text-black">
 
       <Nav />
       <div className="w-full">
@@ -57,11 +57,10 @@ export default function OurBusinesses() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`flex flex-col ${
-                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } items-center gap-8`}
+              className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                } items-center gap-8`}
             >
-              <div className="md:w-1/2 relative h-64 md:h-96 rounded-xl overflow-hidden shadow-lg">
+              <div className="w-full md:w-1/2 relative h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden shadow-lg">
                 <Image
                   src={biz.image}
                   alt={biz.title}
@@ -69,6 +68,7 @@ export default function OurBusinesses() {
                   className="object-cover"
                 />
               </div>
+
               <div className="md:w-1/2 space-y-4">
                 <h2 className="text-3xl font-bold text-black">{biz.title}</h2>
                 <p className="text-black text-lg">{biz.description}</p>
