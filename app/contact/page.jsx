@@ -15,7 +15,7 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_xtqiioc", 
+        "service_xtqiioc",
         "template_len10g4",
         form.current,
         "0w1FNBE-7Na5EeBz3"
@@ -46,9 +46,10 @@ export default function Contact() {
             priority
           />
           <div className="absolute inset-0 bg-black/50" />
-          <h1 className="relative z-10 text-4xl md:text-6xl font-extrabold text-white text-center">
+          <h1 className="relative z-10 text-4xl md:text-6xl font-extrabold text-white text-center border-b-4 border-green-500 pb-6">
             CONTACT US
           </h1>
+
         </section>
 
         {/* Intro text + image */}
