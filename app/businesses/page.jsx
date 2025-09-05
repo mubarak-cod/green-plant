@@ -19,13 +19,13 @@ const businesses = [
       "Our state-of-the-art distribution network ensures reliable electricity access for businesses and communities.",
     image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757024341/image_ebwxjl.png",
   },
-  {
-    id: 3,
-    title: "Innovation & Technol",
-    description:
-      "We leverage cutting-edge technology and smart grids to optimize energy management and efficiency.",
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757024403/image_hvbkwc.png",
-  },
+  // {
+  //   id: 3,
+  //   title: "Innovation & Technol",
+  //   description:
+  //     "We leverage cutting-edge technology and smart grids to optimize energy management and efficiency.",
+  //   image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757024403/image_hvbkwc.png",
+  // },
 ];
 
 export default function OurBusinesses() {
