@@ -21,7 +21,7 @@ const businesses = [
   },
   {
     id: 3,
-    title: "Innovation & Technology",
+    title: "Innovation & Technol",
     description:
       "We leverage cutting-edge technology and smart grids to optimize energy management and efficiency.",
     image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757024403/image_hvbkwc.png",
