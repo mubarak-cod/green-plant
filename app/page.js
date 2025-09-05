@@ -9,6 +9,7 @@ import WhatWeDo from "./components/WhatWeDo";
 import { WorldMapDemo } from "./components/WorldMapDemo";
 import Loader from "./components/Loader";
 import CounterSection from "./components/CounterSection";
+import SmartMapSection from "./components/Map-Section";
 
 
 export default function Home() {
@@ -28,7 +29,8 @@ export default function Home() {
       />
       <Welcome />
       <WhatWeDo />
-      <WorldMapDemo />
+      <SmartMapSection />
+      {/* <WorldMapDemo /> */}
       <CounterSection />
       <Footer />
     </div>
