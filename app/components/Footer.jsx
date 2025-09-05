@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Logo & About */}
         <div className="flex flex-col items-start space-y-4">
           <Image
-            src="/greenlogoo.png"
+            src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757026514/greenlogoo_tuab4h.png"
             alt="Logo"
             width={120}
             height={120}
