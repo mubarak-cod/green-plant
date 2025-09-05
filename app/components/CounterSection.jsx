@@ -3,10 +3,10 @@ import { useEffect, useState, useRef } from "react";
 import { Plus, Check } from "lucide-react";
 
 const counterData = [
-  { target: 50, label: "Customers Served" },
+  { target: 500, label: "Customers Served" },
   { target: 30, label: "Oil and Gas Projects Completed" },
   { target: 20, label: "Gas Station Projects Completed" },
-  { target: 10, label: "Years of Experience" },
+  { target: 15, label: "Years of Experience" },
   { target: 100, label: "Happy Customers", doubleCheck: true },
 ];
 
