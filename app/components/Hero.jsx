@@ -7,7 +7,7 @@ import Image from "next/image";
 const slides = [
   { 
     id: 1, 
-    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757177779/image_igazcq.png", 
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757180219/image_g4tlo4.png", 
     heading: "Reliable Diesel Supply", 
     text: "Our priority is delivering diesel safely and on time. Homes, businesses, and industries trust us to keep operations running without interruption."
   },
@@ -15,7 +15,7 @@ const slides = [
     id: 2, 
     image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757177907/image_g4msb5.png", 
     heading: "24/7 Availability", 
-    text: "We understand diesel is critical to your operations. That’s why we provide round-the-clock supply services whenever and wherever you need it."
+    text: "We provide round-the-clock supply services whenever and wherever you need it."
   },
   { 
     id: 3, 
@@ -33,17 +33,15 @@ const slides = [
     id: 5, 
     image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757178171/image_zflpbj.png", 
     heading: "Affordable & Transparent Pricing", 
-    text: "Get competitive rates with no hidden charges. We provide clear pricing so you can plan your energy costs with confidence."
+    text: "Get competitive rates with no hidden charges. Clear pricing so you can plan your energy costs with confidence."
   },
 ];
-
-
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => handleNext(), 15000); 
+    const interval = setInterval(() => handleNext(), 40000); // 40 seconds
     return () => clearInterval(interval);
   }, []);
 
@@ -69,12 +67,15 @@ export default function HeroSlider() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/40"></div>
+
+          {/* FULL-COVER OVERLAY */}
+          <div className="absolute inset-0 bg-black/70"></div>
+
           <div className="relative z-10 h-full flex flex-col justify-center px-10 lg:px-24 max-w-full">
             <h1 className="text-4xl md:text-6xl font-bold text-white max-w-xl leading-tight drop-shadow-lg">
               {slides[current].heading}
             </h1>
-            <p className="mt-4 text-lg text-gray-200 max-w-md drop-shadow">
+            <p className="mt-4 text-lg text-gray-200 max-w-md drop-shadow-lg">
               {slides[current].text}
             </p>
             <div

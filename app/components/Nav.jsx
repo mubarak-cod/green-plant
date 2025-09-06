@@ -2,11 +2,21 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 const Page = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname(); // Current route
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/who-we-are", label: "About us" },
+    { href: "/why-choose-us", label: "Why Choose Us" },
+    { href: "/services", label: "Our Services" },
+    { href: "/how-it-works", label: "How It Works" },
+  ];
 
   return (
     <div>
@@ -36,20 +46,20 @@ const Page = () => {
 
             {/* Desktop Nav */}
             <div className="hidden [@media(min-width:1180px)]:flex flex-1 justify-center space-x-10">
-              {[
-                { href: "/", label: "Home" },
-                { href: "/who-we-are", label: "About us" },
-                { href: "/why-choose-us", label: "Why Chose Us" },
-                { href: "/services", label: "Our Services" },
-                { href: "/how-it-works", label: "How It Works" },
-              ].map((link) => (
+              {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative text-black text-sm group"
+                  className={`relative text-black text-sm group ${
+                    pathname === link.href ? "font-semibold" : ""
+                  }`}
                 >
                   {link.label}
-                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-green-600 transition-all duration-300 group-hover:w-full"></span>
+                  <span
+                    className={`absolute left-0 -bottom-1 h-[2px] bg-green-600 transition-all duration-300 ${
+                      pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  ></span>
                 </Link>
               ))}
             </div>
@@ -86,21 +96,17 @@ const Page = () => {
             className="[@media(min-width:1180px)]:hidden bg-white shadow-md"
           >
             <div className="px-4 py-6 space-y-4 flex flex-col text-left">
-              <Link href="/" className="text-black hover:text-green-600">
-                Home
-              </Link>
-              <Link href="/who-we-are" className="text-black hover:text-green-600">
-                About us
-              </Link>
-              <Link href="/why-choose-us" className="text-black hover:text-green-600">
-                Why Choose us
-              </Link>
-              <Link href="/services" className="text-black hover:text-green-600">
-                Our Services
-              </Link>
-              <Link href="/how-it-works" className="text-black hover:text-green-600">
-                How It Works
-              </Link>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-black hover:text-green-600 ${
+                    pathname === link.href ? "font-semibold" : ""
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
 
               {/* Contact Button in Mobile */}
               <Link
