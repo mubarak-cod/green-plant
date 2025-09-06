@@ -11,7 +11,7 @@ const Page = () => {
   const pathname = usePathname(); // Current route
 
   const navLinks = [
-    { href: "/", label: "Home" },
+    { href: "/", label: "Place an order" },
     { href: "/who-we-are", label: "About us" },
     { href: "/why-choose-us", label: "Why Choose Us" },
     { href: "/services", label: "Our Services" },
