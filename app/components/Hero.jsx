@@ -36,7 +36,7 @@ export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => handleNext(), 40000); 
+    const interval = setInterval(() => handleNext(), 30000); 
     return () => clearInterval(interval);
   }, []);
 
