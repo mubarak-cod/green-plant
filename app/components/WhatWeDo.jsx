@@ -1,7 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { Suspense } from "react";
-import Tilt from "react-parallax-tilt"; // ✅ use React Tilt
+import React, { useState, Suspense } from "react";
+import Tilt from "react-parallax-tilt"; // ✅ React Tilt
 import { Lens } from "../ui/lens";
 import Loader from "./Loader";
 
@@ -9,10 +8,26 @@ const WhatWeDo = () => {
   const [hovering, setHovering] = useState(false);
 
   const items = [
-    { src: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1755419395/oil1_rkiiey.png", title: "Offshore Terminals", desc: "Efficient offshore liquid bulk discharge operations." },
-    { src: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1755419364/oil2_rhkldt.png", title: "Bulk Storage", desc: "World-class storage facilities for operators." },
-    { src: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1755419335/oil3_sezxk0.png", title: "Distribution Network", desc: "Robust logistics across Nigeria’s 6 geopolitical zones." },
-    { src: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1755419287/oil4_eeivuu.png", title: "Retail Outlets", desc: "Nationwide retail channels for petroleum products." },
+    {
+      src: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1755419395/oil1_rkiiey.png",
+      title: "Diesel Delivery",
+      desc: "Safe and prompt delivery of quality diesel to homes, offices, and industries.",
+    },
+    {
+      src: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1755419364/oil2_rhkldt.png",
+      title: "Bulk Supply",
+      desc: "Large-scale diesel supply tailored for factories, hotels, hospitals, and organizations.",
+    },
+    {
+      src: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1755419335/oil3_sezxk0.png",
+      title: "Reliable Logistics",
+      desc: "Efficient transport and delivery networks across all regions of Nigeria.",
+    },
+    {
+      src: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1755419287/oil4_eeivuu.png",
+      title: "Customer-Focused Service",
+      desc: "We prioritize client satisfaction with timely updates and responsive support.",
+    },
   ];
 
   return (
@@ -21,12 +36,8 @@ const WhatWeDo = () => {
       <div className="text-center max-w-3xl mx-auto mb-10">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-800">What We Do</h1>
         <p className="mt-4 text-white leading-relaxed">
-          We offer one of the largest offshore liquid bulk terminals (SPM/CBM)
-          in Africa to provide efficient discharge of products for operators,
-          complemented by world class storage facilities and retail outlets/channels
-          in all six geopolitical zones in Nigeria. We continually develop strategic
-          infrastructure to facilitate the operational efficiency of our integrated
-          bouquet of services.
+          At Green Plant Energy, we specialize in delivering quality diesel across Nigeria, both in small and bulk quantities.  
+          Our focus is prompt, reliable service to homes, offices, industries, and large organizations, ensuring power is always available when needed.
         </p>
       </div>
 
@@ -42,14 +53,14 @@ const WhatWeDo = () => {
           >
             <div className="relative z-10">
               <Lens hovering={hovering} setHovering={setHovering}>
-                 <Suspense fallback={<Loader />}>
-                <img
-                  src={item.src}
-                  alt={item.title}
-                  width={500}
-                  height={500}
-                  className="rounded-2xl"
-                />
+                <Suspense fallback={<Loader />}>
+                  <img
+                    src={item.src}
+                    alt={item.title}
+                    width={500}
+                    height={500}
+                    className="rounded-2xl"
+                  />
                 </Suspense>
               </Lens>
               <div className="py-4 relative z-20">
