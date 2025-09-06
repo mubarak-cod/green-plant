@@ -7,33 +7,27 @@ import Image from "next/image";
 const slides = [
   { 
     id: 1, 
-    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757111805/image_hcn9oy.png", 
-    heading: "Africa’s Energy Company", 
-    text: "We make energy accessible and reliable across Nigeria. Powering communities, driving growth, and ensuring no one is left without fuel." 
+    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757081994/2_z5y4jt.png", 
+    heading: "Reliable Diesel Supply", 
+    text: "Our priority is delivering diesel safely and on time. Homes, businesses, and industries trust us to keep operations running without interruption."
   },
   { 
     id: 2, 
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757081994/2_z5y4jt.png", 
-    heading: "Reliable Diesel Supply", 
-    text: "Our priority is delivering diesel safely and on time. Homes, businesses, and industries trust us to keep operations running without interruption." 
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757111805/image_hcn9oy.png", 
+    heading: "Powering Progress", 
+    text: "We provide reliable diesel delivery across Nigeria, powering communities and supporting growth at every level."
   },
   { 
     id: 3, 
     image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757139858/image_irpdk8.png", 
-    heading: "Nationwide Reach", 
-    text: "With strong logistics and trusted partnerships, we provide seamless fuel delivery nationwide, supporting industries and powering daily life." 
+    heading: "Delivering Energy", 
+    text: "From homes to industries, our diesel solutions ensure uninterrupted energy supply wherever it’s needed."
   },
   { 
     id: 4, 
-    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757141192/image_geq0ea.png", 
-    heading: "Innovation in Energy", 
-    text: "We leverage technology to improve speed, safety, and efficiency in fuel delivery — transforming the energy experience for our customers." 
-  },
-  { 
-    id: 5, 
     image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757140258/image_vikepy.png", 
-    heading: "Efficiency & Trust", 
-    text: "Green Plant Energy delivers dependable diesel supply that businesses can count on. Efficient, consistent, and built on customer trust." 
+    heading: "Fueling Growth", 
+    text: "Green Plant Energy drives efficiency and trust, helping businesses and communities thrive with consistent fuel delivery."
   },
 ];
 
@@ -42,7 +36,7 @@ export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => handleNext(), 12000);
+    const interval = setInterval(() => handleNext(), 40000); 
     return () => clearInterval(interval);
   }, []);
 

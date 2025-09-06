@@ -9,17 +9,17 @@ const WhatWeDo = () => {
 
   const items = [
     {
-      src: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1755419395/oil1_rkiiey.png",
+      src: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757176130/image_lhfcfn.png",
       title: "Diesel Delivery",
       desc: "Safe and prompt delivery of quality diesel to homes, offices, and industries.",
     },
     {
-      src: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1755419364/oil2_rhkldt.png",
+      src: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757176183/image_qidgwq.png",
       title: "Bulk Supply",
       desc: "Large-scale diesel supply tailored for factories, hotels, hospitals, and organizations.",
     },
     {
-      src: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1755419335/oil3_sezxk0.png",
+      src: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757176229/image_a8pmll.png",
       title: "Reliable Logistics",
       desc: "Efficient transport and delivery networks across all regions of Nigeria.",
     },
