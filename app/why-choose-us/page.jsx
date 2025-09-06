@@ -10,31 +10,31 @@ const features = [
     id: 1,
     title: "Registered & Trusted",
     text: "We are fully CAC certified, ensuring your transactions are safe, transparent, and professional.",
-    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757141462/image_mf5t35.png",
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757175276/image_gz6hjt.png",
   },
   {
     id: 2,
     title: "Competitive Pricing",
     text: "Affordable rates without compromising on quality or reliability, tailored to meet your needs.",
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757082076/4_cz2gjp.png",
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757175329/image_if7ydg.png",
   },
   {
     id: 3,
     title: "Quality Assurance",
     text: "Every drop of fuel is clean, tested, and certified — guaranteed performance and efficiency.",
-    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757111805/image_hcn9oy.png",
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757175385/image_vyq7dj.png",
   },
   {
     id: 4,
     title: "Prompt Delivery",
     text: "Nationwide reach with a commitment to timely deliveries, wherever you are in Nigeria.",
-    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757139858/image_irpdk8.png",
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757175439/image_bz32tw.png",
   },
   {
     id: 5,
     title: "Customer-First Approach",
     text: "Our clients remain at the heart of every service we deliver — excellence is our standard.",
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757082227/5_wu7xbx.png",
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757175497/image_aiktmc.png",
   },
 ];
 

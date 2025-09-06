@@ -39,7 +39,7 @@ const Page = () => {
               {[
                 { href: "/", label: "Home" },
                 { href: "/who-we-are", label: "About us" },
-                { href: "/why-choose-s", label: "Why Chose Us" },
+                { href: "/why-choose-us", label: "Why Chose Us" },
                 { href: "/services", label: "Our Services" },
                 { href: "/how-it-works", label: "How It Works" },
               ].map((link) => (
