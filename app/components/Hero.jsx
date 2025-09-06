@@ -7,29 +7,36 @@ import Image from "next/image";
 const slides = [
   { 
     id: 1, 
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757081994/2_z5y4jt.png", 
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757177779/image_igazcq.png", 
     heading: "Reliable Diesel Supply", 
     text: "Our priority is delivering diesel safely and on time. Homes, businesses, and industries trust us to keep operations running without interruption."
   },
   { 
     id: 2, 
-    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757111805/image_hcn9oy.png", 
-    heading: "Powering Progress", 
-    text: "We provide reliable diesel delivery across Nigeria, powering communities and supporting growth at every level."
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757177907/image_g4msb5.png", 
+    heading: "24/7 Availability", 
+    text: "We understand diesel is critical to your operations. That’s why we provide round-the-clock supply services whenever and wherever you need it."
   },
   { 
     id: 3, 
-    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757139858/image_irpdk8.png", 
-    heading: "Delivering Energy", 
-    text: "From homes to industries, our diesel solutions ensure uninterrupted energy supply wherever it’s needed."
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757177961/image_arpiub.png", 
+    heading: "Premium Quality Fuel", 
+    text: "Our diesel meets industry standards for performance and efficiency, ensuring your machines, generators, and vehicles run at their best."
   },
   { 
     id: 4, 
-    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757140258/image_vikepy.png", 
-    heading: "Fueling Growth", 
-    text: "Green Plant Energy drives efficiency and trust, helping businesses and communities thrive with consistent fuel delivery."
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757178095/image_ur1eyw.png", 
+    heading: "Nationwide Coverage", 
+    text: "From small households to large industrial sites, our wide distribution network ensures timely delivery across the country."
+  },
+  { 
+    id: 5, 
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757178171/image_zflpbj.png", 
+    heading: "Affordable & Transparent Pricing", 
+    text: "Get competitive rates with no hidden charges. We provide clear pricing so you can plan your energy costs with confidence."
   },
 ];
+
 
 
 export default function HeroSlider() {
