@@ -53,10 +53,10 @@ const Page = () => {
                   className="relative text-black text-sm group"
                 >
                   {link.label}
+                  {/* underline effect only on desktop */}
                   <span
-                    className={`absolute left-0 -bottom-1 h-[2px] bg-green-600 transition-all duration-300 ${
-                      pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
-                    }`}
+                    className={`absolute left-0 -bottom-1 h-[2px] bg-green-600 transition-all duration-300 ${pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
                   ></span>
                 </Link>
               ))}
@@ -98,14 +98,9 @@ const Page = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-black hover:text-green-600 relative group`}
+                  className={`text-black text-base font-medium hover:text-green-600 transition`}
                 >
                   {link.label}
-                  <span
-                    className={`absolute left-0 -bottom-1 h-[2px] bg-green-600 transition-all duration-300 ${
-                      pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
-                    }`}
-                  ></span>
                 </Link>
               ))}
 

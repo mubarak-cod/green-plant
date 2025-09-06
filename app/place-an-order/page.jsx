@@ -104,7 +104,7 @@ export default function Home() {
 
     {/* WhatsApp Button */}
     <a
-      href="https://wa.me/234XXXXXXXXXX?text=Hello%20I%20want%20today's%20pricing"
+      href="https://wa.me/+2348127144292?text=Hello%20I%20want%20today's%20pricing"
       target="_blank"
       className="mt-6 block text-center w-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white py-3 rounded-lg font-semibold text-lg shadow-md transition"
     >
