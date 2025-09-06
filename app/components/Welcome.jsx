@@ -4,6 +4,7 @@ import React, { Suspense } from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Loader from "./Loader";
 import Link from "next/link"; 
+
 const Welcome = () => {
   return (
     <section className="w-full py-20 px-6 md:px-12 bg-gray-50">
@@ -17,16 +18,12 @@ const Welcome = () => {
             </span>
           </h1>
           <h3 className="text-xl md:text-2xl font-semibold text-gray-700">
-            Leading Downstream Oil & Gas Company in Nigeria
+            Powering Progress Across Nigeria
           </h3>
           <p className="text-gray-600 leading-relaxed text-lg md:text-base">
-            Pinnacle is an Indigenous Oil and Gas Company active across the
-            entire downstream value chain, focusing on petroleum trading,
-            marketing, distribution, and retail segments of the Nigerian Oil and
-            Gas sector.
+            At Green Plant Energy, we provide reliable, efficient diesel delivery services nationwide. 
+            Our mission is simple: to ensure that homes, businesses, and industries never run out of power.
           </p>
-
-          {/* import Link from "next/link"; */}
 
           <Link href="/contact">
             <button className="mt-8 px-6 py-3 rounded-lg bg-green-600 text-white font-semibold shadow-lg hover:bg-green-700 transition transform hover:-translate-y-1 hover:scale-105">

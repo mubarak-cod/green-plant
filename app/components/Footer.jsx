@@ -20,7 +20,7 @@ const Footer = () => {
             Limited. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum optio illo modi provident consectetur est distinctio itaque suscipit ut dicta?
           </p>
           <p className="text-gray-400 text-xs">
-            &copy; 2024 Green Plant Energy. All rights reserved.
+            &copy; 2025 Green Plant Energy. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-2">
             <a href="#" className="text-gray-400 hover:text-green-500 transition">
@@ -40,9 +40,9 @@ const Footer = () => {
           <h3 className="text-white font-semibold mb-4">Services</h3>
           <ul className="space-y-2 text-gray-300 text-sm">
             <li>Oil and Gas</li>
-            <li>Warehousing</li>
-            <li>Supply Chain and Logistics</li>
-            <li>Real Estate</li>
+            <li>Diesel Delivery</li>
+            <li>Bulk Supply</li>
+            <li>Energy Logistics</li>
           </ul>
         </div>
 
@@ -60,10 +60,10 @@ const Footer = () => {
         <div>
           <h3 className="text-white font-semibold mb-4">Contact Us</h3>
           <p className="text-gray-300 text-sm mb-2">
-            Phone: 08183513133, 08100872002, 08023282049
+            Phone: +2348127144292, +2348127144292.
           </p>
           <p className="text-gray-300 text-sm">
-            Email: <a href="mailto:lomuwasynergylimited@gmail.com" className="hover:text-green-500 transition">greenplantenergylimited@gmail.com</a>
+            Email: <a href="/" className="hover:text-green-500 transition">greenplantenergyservices@gmail.com</a>
           </p>
         </div>
       </div>

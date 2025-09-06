@@ -7,35 +7,36 @@ import Image from "next/image";
 const slides = [
   { 
     id: 1, 
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757081915/1_fhsljn.png", 
-    heading: "Africa’s largest energy company", 
-    text: "We are committed to making energy available and accessible to all, driving development across communities and ensuring that no one is left behind in the journey toward progress." 
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757111805/image_hcn9oy.png", 
+    heading: "Africa’s Energy Company", 
+    text: "We make energy accessible and reliable across Nigeria. Powering communities, driving growth, and ensuring no one is left without fuel." 
   },
   { 
     id: 2, 
     image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757081994/2_z5y4jt.png", 
-    heading: "Driving sustainable energy", 
-    text: "Innovation and sustainability sit at the heart of everything we do, as we work to create solutions that protect the environment while powering homes, businesses, and industries for the future." 
+    heading: "Reliable Diesel Supply", 
+    text: "Our priority is delivering diesel safely and on time. Homes, businesses, and industries trust us to keep operations running without interruption." 
   },
   { 
     id: 3, 
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757082033/3_rergyq.png", 
-    heading: "Global partnerships", 
-    text: "Through collaboration with leading international partners, we are building stronger networks and advancing technologies that ensure reliable, affordable, and clean energy supply worldwide." 
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757139858/image_irpdk8.png", 
+    heading: "Nationwide Reach", 
+    text: "With strong logistics and trusted partnerships, we provide seamless fuel delivery nationwide, supporting industries and powering daily life." 
   },
   { 
     id: 4, 
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757082076/4_cz2gjp.png", 
-    heading: "Innovation in energy", 
-    text: "By leveraging cutting-edge technology and research, we are transforming the energy landscape with cleaner, more reliable, and future-ready solutions that power modern living." 
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757141192/image_geq0ea.png", 
+    heading: "Innovation in Energy", 
+    text: "We leverage technology to improve speed, safety, and efficiency in fuel delivery — transforming the energy experience for our customers." 
   },
   { 
     id: 5, 
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757082227/5_wu7xbx.png", 
-    heading: "Energy efficiency and sustainability", 
-    text: "Our focus on efficiency and sustainability helps reduce carbon emissions, while delivering consistent, dependable power to millions of people and industries across the continent." 
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757140258/image_vikepy.png", 
+    heading: "Efficiency & Trust", 
+    text: "Green Plant Energy delivers dependable diesel supply that businesses can count on. Efficient, consistent, and built on customer trust." 
   },
 ];
+
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
