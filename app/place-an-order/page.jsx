@@ -10,9 +10,44 @@ export default function Home() {
   const formEl = useRef(null);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
+  const [formattedDate, setFormattedDate] = useState("");
 
   const scrollToForm = () => {
     formRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // Format date like: 3rd Thursday March 2025
+  const formatDate = (date) => {
+    const d = new Date(date);
+
+    const day = d.getDate();
+    const weekday = d.toLocaleString("en-US", { weekday: "long" });
+    const month = d.toLocaleString("en-US", { month: "long" });
+    const year = d.getFullYear();
+
+    // Ordinal suffix
+    const getOrdinal = (n) => {
+      if (n > 3 && n < 21) return n + "th";
+      switch (n % 10) {
+        case 1:
+          return n + "st";
+        case 2:
+          return n + "nd";
+        case 3:
+          return n + "rd";
+        default:
+          return n + "th";
+      }
+    };
+
+    return `${getOrdinal(day)} ${weekday} ${month} ${year}`;
+  };
+
+  const handleDateChange = (e) => {
+    const val = e.target.value;
+    if (val) {
+      setFormattedDate(formatDate(val));
+    }
   };
 
   const sendEmail = (e) => {
@@ -21,16 +56,17 @@ export default function Home() {
 
     emailjs
       .sendForm(
-        "service_xtqiioc", 
-        "template_wd6h4pn", 
+        "service_xtqiioc", // replace with your EmailJS service ID
+        "template_wd6h4pn", // replace with your template ID
         formEl.current,
-        "0w1FNBE-7Na5EeBz3" 
+        "0w1FNBE-7Na5EeBz3" // replace with your public key
       )
       .then(
         () => {
           setLoading(false);
           setSuccess("✅ Order sent successfully! We’ll get back shortly.");
           formEl.current.reset();
+          setFormattedDate("");
           setTimeout(() => setSuccess(""), 4000);
         },
         (error) => {
@@ -64,8 +100,9 @@ export default function Home() {
               Welcome to Green Plant Energy Oil and Gas Limited ⛽
             </h1>
             <p className="mb-6 text-lg leading-relaxed">
-              We specialize in clean, safe, and quality diesel delivery across Lagos. 
-              Whether it’s for your home, estate, hotel, hospital, or event, we’ve got you covered.
+              We specialize in clean, safe, and quality diesel delivery across
+              Lagos. Whether it’s for your home, estate, hotel, hospital, or
+              event, we’ve got you covered.
             </p>
             <button
               onClick={scrollToForm}
@@ -108,16 +145,27 @@ export default function Home() {
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 transition"
               />
+
               <div>
                 <label className="block mb-2 font-medium text-gray-700">
                   Preferred Delivery Time
                 </label>
                 <input
                   type="date"
-                  name="delivery_time"
-                  required
+                  onChange={handleDateChange}
                   className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500 transition"
                 />
+                {/* Hidden input for EmailJS */}
+                <input
+                  type="hidden"
+                  name="delivery_time"
+                  value={formattedDate}
+                />
+                {formattedDate && (
+                  <p className="mt-2 text-sm text-gray-600">
+                    📅 Selected: <span className="font-semibold">{formattedDate}</span>
+                  </p>
+                )}
               </div>
 
               <button
@@ -151,15 +199,18 @@ export default function Home() {
           <h3 className="text-xl font-bold">Important Information</h3>
           <ul className="list-disc pl-5 space-y-2">
             <li>
-              Delivery 🚚 is not free and varies by location and quantity. At least
-              24 hours' notice for scheduling and dispatch.
+              Delivery 🚚 is not free and varies by location and quantity. At
+              least 24 hours' notice for scheduling and dispatch.
             </li>
             <li>
-              Payment validates your order—we only confirm delivery after payment
-              is received.
+              Payment validates your order—we only confirm delivery after
+              payment is received.
             </li>
             <li>🚫 No cash allowed. ✅ Bank Transfers only.</li>
-            <li>‼ No refunds will be issued for deliveries that have already been made.</li>
+            <li>
+              ‼ No refunds will be issued for deliveries that have already been
+              made.
+            </li>
             <li>
               Diesel deliveries will be made according to the scheduled date and
               time agreed upon by both parties.

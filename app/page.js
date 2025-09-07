@@ -22,7 +22,7 @@ export default function Home() {
       <HeroSlider />
       </Suspense>
        <ChatWidget
-        phone="+2347039978994"            
+        phone="+2348127144292"            
         welcome="Hi! I’m your assistant 🤖 — how can I help today?"
         ctaText="Chat on WhatsApp"
         presetText="Hello! I’d like to speak with support."
