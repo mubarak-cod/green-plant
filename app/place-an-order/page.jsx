@@ -29,7 +29,7 @@ export default function Home() {
       .then(
         () => {
           setLoading(false);
-          setSuccess("✅ Order sent successfully! We’ll get back within 30 mins.");
+          setSuccess("✅ Order sent successfully! We’ll get back shortly.");
           formEl.current.reset();
           setTimeout(() => setSuccess(""), 4000);
         },
