@@ -4,7 +4,7 @@ import { MessageCircle, X, Bot, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function ChatWidget({
-  phone = "+2348012345678",           // <-- CHANGE THIS to your WhatsApp number
+  phone = "+2348127144292",           // <-- CHANGE THIS to your WhatsApp number
   welcome = "Hi there! I’m your AI assistant 🤖. How can I help?",
   ctaText = "Chat on WhatsApp",
   presetText = "Hello! I’d like to chat.",

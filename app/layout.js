@@ -30,12 +30,11 @@ export default function RootLayout({ children }) {
 
         {/* Chat widget (always visible) */}
         <ChatWidget
-          phone="+2347039978994"
-          welcome="Hi! I’m your assistant 🤖 — how can I help today?"
-          ctaText="Chat on WhatsApp"
-          presetText="Hello! I’d like to speak with support."
-        />
-
+              phone="+2348127144292"
+              welcome="👋 Welcome to Green Plant Energy! We're here to keep your business and home powered."
+              ctaText="Chat with Us on WhatsApp"
+              presetText="Hello Green Plant Energy solutions, I’d like to make an enquiry about your diesel supply and energy solutions."
+            />
         
       </body>
     </html>

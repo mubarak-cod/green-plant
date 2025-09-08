@@ -19,14 +19,15 @@ export default function Home() {
       <Nav />
       <Suspense fallback={<Loader />}>
 
-      <HeroSlider />
+        <HeroSlider />
       </Suspense>
-       <ChatWidget
-        phone="+2348127144292"            
-        welcome="Hi! I’m your assistant 🤖 — how can I help today?"
-        ctaText="Chat on WhatsApp"
-        presetText="Hello! I’d like to speak with support."
+      <ChatWidget
+        phone="+2348127144292"
+        welcome="👋 Welcome to Green Plant Energy! We're here to keep your business and home powered."
+        ctaText="Chat with Us on WhatsApp"
+        presetText="Hello Green Plant Energy team, I’d like to make an enquiry about your diesel supply and energy solutions."
       />
+
       <Welcome />
       <WhatWeDo />
       <SmartMapSection />
