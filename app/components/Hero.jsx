@@ -8,8 +8,8 @@ const slides = [
   {
     id: 0,
     image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757178171/image_zflpbj.png",
-    heading: "Company's Overview",
-    text: "Green Plant Energy is committed to powering progress through reliable fuel delivery and sustainable practices...",
+    heading: "Green Plant Energy",
+    text: "Green Plant Energy is a forward-thinking energy solutions company dedicated to reliable fuel delivery and sustainable practices. We keep homes, businesses, and industries powered efficiently...",
     isOverview: true
   },
   {
@@ -98,13 +98,15 @@ export default function HeroSlider() {
               )}
             </p>
 
-            <div
-              onClick={() => (window.location.href = "/who-we-are")}
-              className="mt-5 flex items-center justify-center bg-white text-black font-semibold rounded-md px-6 py-2 text-sm md:text-base hover:bg-gray-100 cursor-pointer transition-shadow shadow-md hover:shadow-lg w-fit"
-            >
-              Who We Are
-              <ChevronRight className="ml-2" size={18} />
-            </div>
+            {/* {slides[current].isOverview && ( */}
+              <div
+                onClick={() => (window.location.href = "/who-we-are")}
+                className="mt-5 flex items-center justify-center bg-white text-black font-semibold rounded-md px-6 py-2 text-sm md:text-base hover:bg-gray-100 cursor-pointer transition-shadow shadow-md hover:shadow-lg w-fit"
+              >
+                Who We Are
+                <ChevronRight className="ml-2" size={18} />
+              </div>
+            {/* )} */}
           </div>
         </motion.div>
       </AnimatePresence>
