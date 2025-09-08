@@ -9,7 +9,7 @@ export default function Home() {
   const formRef = useRef(null);
   const formEl = useRef(null);
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState("");
+  const [status, setStatus] = useState("idle"); // idle | success | error
   const [formattedDate, setFormattedDate] = useState("");
 
   const scrollToForm = () => {
@@ -38,7 +38,7 @@ export default function Home() {
         default:
           return n + "th";
       }
-    };
+    }
 
     return `${getOrdinal(day)} ${weekday} ${month} ${year}`;
   };
@@ -53,6 +53,7 @@ export default function Home() {
   const sendEmail = (e) => {
     e.preventDefault();
     setLoading(true);
+    setStatus("idle");
 
     emailjs
       .sendForm(
@@ -64,15 +65,20 @@ export default function Home() {
       .then(
         () => {
           setLoading(false);
-          setSuccess("✅ Order sent successfully! We’ll get back shortly.");
+          setStatus("success");
           formEl.current.reset();
           setFormattedDate("");
-          setTimeout(() => setSuccess(""), 4000);
+
+          // Reset back after 6s
+          setTimeout(() => setStatus("idle"), 6000);
         },
         (error) => {
           setLoading(false);
-          setSuccess("❌ Failed to send. Try again later.");
+          setStatus("error");
           console.error(error);
+
+          // Reset back after 6s
+          setTimeout(() => setStatus("idle"), 6000);
         }
       );
   };
@@ -163,25 +169,60 @@ export default function Home() {
                 />
                 {formattedDate && (
                   <p className="mt-2 text-sm text-gray-600">
-                    📅 Selected: <span className="font-semibold">{formattedDate}</span>
+                    📅 Selected:{" "}
+                    <span className="font-semibold">{formattedDate}</span>
                   </p>
                 )}
               </div>
 
+              {/* Submit Button */}
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold text-lg shadow-md transition"
+                className={`w-full flex items-center justify-center py-3 rounded-lg font-semibold text-lg shadow-md transition 
+                  ${
+                    status === "success"
+                      ? "bg-green-700 text-white"
+                      : status === "error"
+                      ? "bg-red-600 text-white"
+                      : loading
+                      ? "bg-gray-400 text-white cursor-not-allowed"
+                      : "bg-green-600 hover:bg-green-700 text-white"
+                  }`}
               >
-                {loading ? "Sending..." : "Submit Order"}
+                {loading ? (
+                  <>
+                    <svg
+                      className="animate-spin h-5 w-5 mr-2 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                      ></path>
+                    </svg>
+                    Sending...
+                  </>
+                ) : status === "success" ? (
+                  "✅ Submitted successfully"
+                ) : status === "error" ? (
+                  "❌ Failed to send"
+                ) : (
+                  "Submit Order"
+                )}
               </button>
             </form>
-
-            {success && (
-              <p className="mt-4 text-center text-green-700 font-medium">
-                {success}
-              </p>
-            )}
 
             {/* WhatsApp Button */}
             <a

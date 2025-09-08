@@ -1,17 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import { Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const form = useRef();
+  const [btnText, setBtnText] = useState("Send Message");
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
+    setBtnText("Sending...");
 
     emailjs
       .sendForm(
@@ -22,12 +26,22 @@ export default function Contact() {
       )
       .then(
         () => {
-          alert("Message sent successfully ✅");
+          setLoading(false);
+          setBtnText("Submitted ✅");
           form.current.reset();
+
+          setTimeout(() => {
+            setBtnText("Send Message");
+          }, 6000);
         },
         (error) => {
           console.error("FAILED...", error.text);
-          alert("Something went wrong ❌, try again.");
+          setLoading(false);
+          setBtnText("Failed ❌");
+
+          setTimeout(() => {
+            setBtnText("Send Message");
+          }, 6000);
         }
       );
   };
@@ -49,7 +63,6 @@ export default function Contact() {
           <h1 className="relative z-10 text-4xl md:text-6xl font-extrabold text-white text-center border-b-4 border-green-500 pb-6">
             CONTACT US
           </h1>
-
         </section>
 
         {/* Intro text + image */}
@@ -163,10 +176,20 @@ export default function Contact() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full md:w-auto flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-emerald-700 shadow-md hover:bg-gray-100 active:bg-gray-200 transition focus:outline-none focus:ring-2 focus:ring-white"
+                  disabled={loading}
+                  className="w-full md:w-auto flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-emerald-700 shadow-md hover:bg-gray-100 active:bg-gray-200 transition focus:outline-none focus:ring-2 focus:ring-white disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-5 h-5" />
-                  Send Message
+                  {loading ? (
+                    <>
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      {btnText}
+                    </>
+                  )}
                 </button>
               </form>
             </div>
