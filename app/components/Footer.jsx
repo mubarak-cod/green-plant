@@ -17,7 +17,7 @@ const Footer = () => {
             priority
           />
           <p className="text-gray-300 text-sm">
-            Limited. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum optio illo modi provident consectetur est distinctio itaque suscipit ut dicta?
+           Green Plant Energy is a registered Nigerian energy solutions provider, focused on seamless diesel supply and distribution.
           </p>
           <p className="text-gray-400 text-xs">
             &copy; 2025 Green Plant Energy. All rights reserved.
