@@ -4,17 +4,25 @@ import { MessageCircle, X, Bot, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function ChatWidget({
-  phone = "+2348127144292",           // <-- CHANGE THIS to your WhatsApp number
+  phone = "+2348127144292", // <-- CHANGE THIS to your WhatsApp number
   welcome = "Hi there! I’m your AI assistant 🤖. How can I help?",
   ctaText = "Chat on WhatsApp",
   presetText = "Hello! I’d like to chat.",
 }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const containerRef = useRef(null);
+
+  // Only render certain client-only parts after hydration
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Close on outside click or ESC
   useEffect(() => {
-    function onKey(e) { if (e.key === "Escape") setOpen(false); }
+    function onKey(e) {
+      if (e.key === "Escape") setOpen(false);
+    }
     function onClick(e) {
       if (containerRef.current && !containerRef.current.contains(e.target)) {
         setOpen(false);
@@ -67,9 +75,7 @@ export default function ChatWidget({
             </div>
 
             <div className="px-4 py-4">
-              <p className="text-sm text-gray-700 leading-relaxed">
-                {welcome}
-              </p>
+              <p className="text-sm text-gray-700 leading-relaxed">{welcome}</p>
 
               <button
                 onClick={openWhatsApp}
@@ -99,20 +105,20 @@ export default function ChatWidget({
           <span className="sr-only">Chat with us</span>
 
           {/* pulse accent */}
-         <span className="absolute inset-0 rounded-full animate-ping bg-[#003017]/60 pointer-events-none" />
-
-
-
-
+          {mounted && (
+            <span className="absolute inset-0 rounded-full animate-ping bg-[#003017]/60 pointer-events-none" />
+          )}
         </button>
 
-        {/* “Chat with us” pill (clickable too) */}
-        <button
-          onClick={() => setOpen(true)}
-          className="hidden sm:inline-flex items-center rounded-full bg-white/90 backdrop-blur px-4 py-2 text-sm font-medium text-gray-800 shadow-md ring-1 ring-black/5 hover:bg-white"
-        >
-          Chat with us 🤝
-        </button>
+        {/* “Chat with us” pill (client-only, avoids SSR mismatch) */}
+        {mounted && (
+          <button
+            onClick={() => setOpen(true)}
+            className="hidden sm:inline-flex items-center rounded-full bg-white/90 backdrop-blur px-4 py-2 text-sm font-medium text-gray-800 shadow-md ring-1 ring-black/5 hover:bg-white"
+          >
+            Chat with us 🤝
+          </button>
+        )}
       </div>
     </div>
   );

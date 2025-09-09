@@ -8,32 +8,32 @@ import Footer from "../components/Footer";
 const features = [
   {
     id: 1,
-    title: "Registered & Trusted",
-    text: "We are fully CAC certified, ensuring your transactions are safe, transparent, and professional.",
+    title: "Timely Delivery",
+    text: "We ensure your diesel supply arrives exactly when you need it, minimizing downtime and disruption.",
     image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757175276/image_gz6hjt.png",
   },
   {
     id: 2,
-    title: "Competitive Pricing",
-    text: "Affordable rates without compromising on quality or reliability, tailored to meet your needs.",
+    title: "Quality & Safety",
+    text: "Premium diesel, handled and delivered with strict safety and quality standards.",
     image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757175329/image_if7ydg.png",
   },
   {
     id: 3,
-    title: "Quality Assurance",
-    text: "Every drop of fuel is clean, tested, and certified — guaranteed performance and efficiency.",
+    title: "Nationwide Coverage",
+    text: "A reliable logistics network serving homes, offices, and industries across Nigeria.",
     image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757175385/image_vyq7dj.png",
   },
   {
     id: 4,
-    title: "Prompt Delivery",
-    text: "Nationwide reach with a commitment to timely deliveries, wherever you are in Nigeria.",
+    title: "Customer Commitment",
+    text: "Transparent operations, responsive support, and services tailored to your needs.",
     image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757175439/image_bz32tw.png",
   },
   {
     id: 5,
-    title: "Customer-First Approach",
-    text: "Our clients remain at the heart of every service we deliver — excellence is our standard.",
+    title: "Sustainability Driven",
+    text: "Committed to efficiency and greener energy practices as we build the future of energy logistics.",
     image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757175497/image_aiktmc.png",
   },
 ];
@@ -41,27 +41,31 @@ const features = [
 const WhyChooseUs = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Nav */}
+      {/* Navbar */}
       <Nav />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-green-50 to-white py-24 px-6 md:px-12">
+      <section className="relative overflow-hidden bg-gradient-to-r from-green-50 via-white to-green-50 py-24 px-6 md:px-12">
+        {/* Floating Blobs */}
+        <div className="absolute -top-10 -left-10 w-72 h-72 bg-green-200/40 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-20 right-0 w-80 h-80 bg-green-300/30 rounded-full blur-3xl animate-pulse delay-200" />
+
         <motion.h1
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-extrabold text-center text-gray-900"
+          className="relative text-4xl md:text-6xl font-extrabold text-center text-gray-900"
         >
-          Why <span className="text-green-600">Choose Us</span>
+          Why <span className="text-green-600">Choose Green Plant Energy?</span>
         </motion.h1>
+
         <motion.p
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="mt-6 text-lg md:text-xl text-gray-600 text-center max-w-3xl mx-auto"
+          className="relative mt-6 text-lg md:text-xl text-gray-600 text-center max-w-3xl mx-auto"
         >
-          At Green Plant Energy, we go beyond fuel supply — we deliver trust,
-          speed, and sustainable value across Nigeria.
+          We don’t just deliver fuel — we deliver reliability, trust, and a commitment to building a sustainable energy future.
         </motion.p>
       </section>
 
@@ -71,11 +75,12 @@ const WhyChooseUs = () => {
           {features.map((feature, index) => (
             <motion.div
               key={feature.id}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              whileHover={{ scale: 1.05 }}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col group"
+              transition={{ duration: 0.9, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8, scale: 1.03 }}
+              className="relative bg-white/80 backdrop-blur-md rounded-3xl shadow-lg overflow-hidden flex flex-col group border border-green-100 hover:shadow-2xl transition"
             >
               {/* Image */}
               <div className="relative w-full h-56 overflow-hidden">
@@ -86,6 +91,8 @@ const WhyChooseUs = () => {
                   height={300}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                {/* Glow Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
               </div>
 
               {/* Content */}

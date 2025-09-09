@@ -1,49 +1,47 @@
 "use client";
 import { motion } from "framer-motion";
 import { Phone, Mail } from "lucide-react";
-import Nav from "../components/Nav";   // adjust path if different
-import Footer from "../components/Footer"; // adjust path if different
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 const steps = [
   {
     id: 1,
-    title: "Request a Quote",
+    title: "Place Your Order",
     description:
-      "Contact us via phone, email, or website form to request your diesel supply.",
+      "Request diesel via phone, WhatsApp, or our online form — choose the quantity and delivery location.",
   },
   {
     id: 2,
-    title: "Confirm Your Order",
+    title: "Order Confirmation",
     description:
-      "Agree on volume, delivery time, and secure payment (bank transfer only).",
+      "Our team confirms your request, provides transparent pricing, and schedules delivery.",
   },
   {
     id: 3,
-    title: "We Deliver",
+    title: "Fast & Reliable Delivery",
     description:
-      "Our logistics team ensures safe and timely supply at your location nationwide.",
+      "Diesel is transported safely through our trusted logistics network, arriving exactly when you need it.",
   },
   {
     id: 4,
-    title: "Stay Powered",
+    title: "Hassle-Free Support",
     description:
-      "Enjoy uninterrupted energy supply with Green Plant Energy.",
+      "From start to finish, our customer support team keeps you updated with real-time assistance.",
   },
 ];
 
 export default function HowItWorksPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navbar */}
       <Nav />
 
-      {/* Main Section */}
       <main className="flex-grow">
         <section className="relative bg-gradient-to-b from-white to-green-50 py-24 px-6 overflow-hidden">
-          {/* Background Accent */}
+          {/* Background Effects */}
           <div className="absolute inset-0 -z-10">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-green-200/40 rounded-full blur-3xl" />
-            <div className="absolute bottom-20 right-10 w-72 h-72 bg-green-300/30 rounded-full blur-3xl" />
+            <div className="absolute top-20 left-10 w-72 h-72 bg-green-300/30 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-green-200/40 rounded-full blur-3xl animate-pulse delay-200" />
           </div>
 
           {/* Heading */}
@@ -52,45 +50,55 @@ export default function HowItWorksPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-3xl mx-auto mb-20"
           >
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
               How It Works
             </h2>
             <p className="text-lg text-gray-600">
-              Simple, transparent, and reliable energy delivery process.
+              A seamless, transparent, and reliable diesel supply process.
             </p>
           </motion.div>
 
           {/* Timeline */}
-          <div className="relative max-w-5xl mx-auto">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-1 bg-green-200 hidden md:block" />
-            <div className="space-y-16 md:space-y-24">
+          <div className="relative max-w-6xl mx-auto">
+            {/* Central line */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-1 bg-gradient-to-b from-green-300 to-green-600 hidden md:block" />
+
+            <div className="space-y-20 md:space-y-28">
               {steps.map((step, index) => (
                 <motion.div
                   key={step.id}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -60 : 60 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   className={`flex flex-col md:flex-row items-center gap-8 ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                    index % 2 === 0
+                      ? "md:flex-row"
+                      : "md:flex-row-reverse"
                   }`}
                 >
-                  {/* Circle Marker */}
+                  {/* Step Number */}
                   <div className="hidden md:flex flex-col items-center justify-center">
-                    <div className="w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center font-bold">
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      className="w-14 h-14 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-lg shadow-lg"
+                    >
                       {step.id}
-                    </div>
+                    </motion.div>
                   </div>
 
-                  {/* Text Card */}
-                  <div className="flex-1 bg-white shadow-lg rounded-2xl p-6 md:p-8 hover:shadow-2xl transition">
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-3">
+                  {/* Card */}
+                  <motion.div
+                    whileHover={{ y: -6, scale: 1.02 }}
+                    className="flex-1 bg-white/90 backdrop-blur-sm shadow-xl rounded-3xl p-8 hover:shadow-2xl transition"
+                  >
+                    <h3 className="text-2xl font-semibold text-green-700 mb-3">
                       {step.title}
                     </h3>
                     <p className="text-gray-600 text-lg">{step.description}</p>
-                  </div>
+                  </motion.div>
                 </motion.div>
               ))}
             </div>
@@ -98,31 +106,31 @@ export default function HowItWorksPage() {
 
           {/* Contact Section */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.9 }}
             viewport={{ once: true }}
-            className="mt-28 max-w-4xl mx-auto text-center"
+            className="mt-32 max-w-4xl mx-auto text-center"
           >
-            <div className="relative bg-white/70 backdrop-blur-xl shadow-xl rounded-3xl p-10 border border-green-100">
+            <div className="relative bg-white/80 backdrop-blur-lg shadow-2xl rounded-3xl p-12 border border-green-100">
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
                 Contact Us
               </h3>
-              <p className="text-gray-600 text-lg mb-8">
-                Green Plant Energy — Powering the Future, Today.
+              <p className="text-gray-600 text-lg mb-10">
+                Green Plant Energy — Reliable. Fast. Transparent.
               </p>
 
               <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 <a
                   href="tel:+2348127144292"
-                  className="flex items-center gap-3 bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition shadow-md"
+                  className="flex items-center gap-3 bg-green-600 text-white px-8 py-4 rounded-full hover:bg-green-700 transition shadow-lg text-lg"
                 >
                   <Phone className="w-5 h-5" />
                   +234 812 714 4292
                 </a>
                 <a
                   href="mailto:greenplantenergyservices@gmail.com"
-                  className="flex items-center gap-3 bg-green-100 text-green-700 text-sm px-6 py-3 rounded-full hover:bg-green-200 transition shadow-md"
+                  className="flex items-center gap-3 bg-green-100 text-green-700 text-lg px-8 py-4 rounded-full hover:bg-green-200 transition shadow-lg"
                 >
                   <Mail className="w-5 h-5" />
                   greenplantenergyservices@gmail.com
@@ -133,7 +141,6 @@ export default function HowItWorksPage() {
         </section>
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

@@ -138,83 +138,8 @@ const WhatWeDo = () => {
 
 
     </section>
-              <div className="max-w-7xl mx-auto px-6 py-16">
-      
-                <h1 className="text-black text-4xl mb-4">Our Vision</h1>
-                <p className="text-sm text-black mb-8">To become the leading name in energy logistics across Africa, known for reliability and customer satisfaction.</p>
-                <div className="flex flex-wrap justify-center gap-4 mb-12">
-                  {visionTabs.map((tab) => (
-                    <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`px-6 py-3 rounded-full font-semibold transition-colors ${activeTab === tab.id
-                      ? "bg-green-600 text-white shadow-md"
-                        : "bg-gray-100 text-gray-700 hover:bg-green-100"
-                      }`}
-                      >
-                      {tab.title}
-                    </button>
-                  ))}
-                </div>
-      
-                {/* Active Tab Content */}
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={activeTab}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -30 }}
-                    transition={{ duration: 0.6 }}
-                    className="flex flex-col md:flex-row items-center gap-10"
-                    >
-                    <div className="w-full md:w-1/2 relative h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden shadow-lg">
-                      <Image
-                        src={activeContent.image}
-                        alt={activeContent.title}
-                        width={600}
-                        height={400}
-                        className="w-full h-auto rounded-xl shadow-lg object-cover"
-                        />
-                    </div>
-                    <div className="md:w-1/2 space-y-4">
-                      <h2 className="text-3xl font-bold">{activeContent.title}</h2>
-                      <p className="text-lg text-gray-700">{activeContent.description}</p>
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-              </div>
+          
 
-
-              
-                            <div className="max-w-7xl mx-auto px-6 py-16 space-y-24">
-                              <h1 className="text-4xl text-black mb-5">Our Mission</h1>
-                              <p className=" text-black mb-4">To power lives and businesses through timely, transparent, and efficient energy solutions.</p>
-                              {missionSections.map((section, index) => (
-                                <motion.div
-                                  key={section.id}
-                                  initial={{ opacity: 0, y: 50 }}
-                                  whileInView={{ opacity: 1, y: 0 }}
-                                  viewport={{ once: true }}
-                                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                                  className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-8`}
-                                >
-                                  <div className="w-full md:w-1/2 relative h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden shadow-lg">
-                                    <Image
-                                      src={section.image}
-                                      alt={section.title}
-                                      width={600}
-                                      height={400}
-                                      className="w-full h-auto rounded-xl shadow-lg object-cover"
-                                    />
-                                  </div>
-                      
-                                  <div className="md:w-1/2 space-y-4">
-                                    <h2 className="text-3xl font-bold text-black">{section.title}</h2>
-                                    <p className="text-black text-lg">{section.description}</p>
-                                  </div>
-                                </motion.div>
-                              ))}
-                            </div>
                         </div>
   );
 };

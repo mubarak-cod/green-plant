@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ShoppingCart, FileText } from "lucide-react";
 import Image from "next/image";
 
 const slides = [
@@ -53,7 +53,7 @@ export default function HeroSlider() {
       handleNext();
     }, delay);
     return () => clearInterval(interval);
-  }, [current]); 
+  }, [current]);
 
   const handleNext = () => setCurrent((prev) => (prev + 1) % slides.length);
   const handlePrev = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
@@ -85,7 +85,7 @@ export default function HeroSlider() {
             <h1 className="text-2xl md:text-4xl font-bold text-white max-w-xl leading-snug drop-shadow-lg">
               {slides[current].heading}
             </h1>
-            
+
             <p className="mt-3 text-base md:text-lg text-gray-200 max-w-lg drop-shadow-lg">
               {slides[current].text}
               {slides[current].isOverview && (
@@ -99,12 +99,32 @@ export default function HeroSlider() {
             </p>
 
             {/* Who We Are button */}
-            <div
-              onClick={() => (window.location.href = "/who-we-are")}
-              className="mt-5 flex items-center justify-center bg-white text-black font-semibold rounded-md px-6 py-2 text-sm md:text-base hover:bg-gray-100 cursor-pointer transition-shadow shadow-md hover:shadow-lg w-fit"
-            >
-              Who We Are
-              <ChevronRight className="ml-2" size={18} />
+            <div className="mt-6 flex flex-col sm:flex-row gap-4">
+              {/* Order Diesel Now */}
+              <button
+                onClick={() => (window.location.href = "/place-an-order")}
+                className="flex items-center justify-center gap-2 bg-[#228B22] text-white font-semibold rounded-lg px-6 py-3 text-sm md:text-base hover:bg-[#1a6f1a] shadow-md hover:shadow-lg transition w-full sm:w-auto"
+              >
+                <ShoppingCart size={18} />
+                Order Diesel Now
+              </button>
+
+              {/* Get a Quote */}
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/2348127144292?text=" +
+                    encodeURIComponent("Hello 👋, I’d like to request a quote for diesel supply (main purposes)."),
+                    "_blank",
+                    "noopener,noreferrer"
+                  )
+                }
+                className="flex items-center justify-center gap-2 bg-white text-[#228B22] border border-[#228B22] font-semibold rounded-lg px-6 py-3 text-sm md:text-base hover:bg-gray-100 shadow-md hover:shadow-lg transition w-full sm:w-auto"
+              >
+                <FileText size={18} />
+                Get a Quote
+              </button>
+
             </div>
 
             {/* Yellow navigation buttons (moved here) */}

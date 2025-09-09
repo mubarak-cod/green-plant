@@ -10,6 +10,9 @@ import { WorldMapDemo } from "./components/WorldMapDemo";
 import Loader from "./components/Loader";
 import CounterSection from "./components/CounterSection";
 import SmartMapSection from "./components/Map-Section";
+import CTASection from "./components/Cta";
+import VisionMission from "./components/VisionMission";
+import Testimonials from "./components/Testimonials";
 
 
 export default function Home() {
@@ -30,7 +33,10 @@ export default function Home() {
 
       <Welcome />
       <WhatWeDo />
+      <VisionMission />
+      <CTASection />
       <SmartMapSection />
+      <Testimonials />
       {/* <WorldMapDemo /> */}
       <CounterSection />
       <Footer />
