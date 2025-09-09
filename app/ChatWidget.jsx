@@ -99,7 +99,11 @@ export default function ChatWidget({
           <span className="sr-only">Chat with us</span>
 
           {/* pulse accent */}
-          <span className="absolute inset-0 rounded-full animate-ping bg-emerald-500/40 pointer-events-none" />
+         <span className="absolute inset-0 rounded-full animate-ping bg-[#003017]/60 pointer-events-none" />
+
+
+
+
         </button>
 
         {/* “Chat with us” pill (clickable too) */}
@@ -107,7 +111,7 @@ export default function ChatWidget({
           onClick={() => setOpen(true)}
           className="hidden sm:inline-flex items-center rounded-full bg-white/90 backdrop-blur px-4 py-2 text-sm font-medium text-gray-800 shadow-md ring-1 ring-black/5 hover:bg-white"
         >
-          Chat with us
+          Chat with us 🤝
         </button>
       </div>
     </div>
