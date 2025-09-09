@@ -98,34 +98,43 @@ export default function HeroSlider() {
               )}
             </p>
 
-            {/* {slides[current].isOverview && ( */}
-              <div
-                onClick={() => (window.location.href = "/who-we-are")}
-                className="mt-5 flex items-center justify-center bg-white text-black font-semibold rounded-md px-6 py-2 text-sm md:text-base hover:bg-gray-100 cursor-pointer transition-shadow shadow-md hover:shadow-lg w-fit"
+            {/* Who We Are button */}
+            <div
+              onClick={() => (window.location.href = "/who-we-are")}
+              className="mt-5 flex items-center justify-center bg-white text-black font-semibold rounded-md px-6 py-2 text-sm md:text-base hover:bg-gray-100 cursor-pointer transition-shadow shadow-md hover:shadow-lg w-fit"
+            >
+              Who We Are
+              <ChevronRight className="ml-2" size={18} />
+            </div>
+
+            {/* Yellow navigation buttons (moved here) */}
+            <div className="mt-6 flex gap-4">
+              <button
+                onClick={handlePrev}
+                className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center hover:bg-yellow-500 transition"
               >
-                Who We Are
-                <ChevronRight className="ml-2" size={18} />
-              </div>
-            {/* )} */}
+                <ChevronLeft className="text-black" />
+              </button>
+              <button
+                onClick={handleNext}
+                className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center hover:bg-yellow-500 transition"
+              >
+                <ChevronRight className="text-black" />
+              </button>
+            </div>
+
+            {/* Progress Bar */}
+            <div className="mt-6 w-full max-w-lg bg-gray-700 h-2 rounded-full overflow-hidden">
+              <motion.div
+                className="h-full bg-yellow-400"
+                initial={{ width: 0 }}
+                animate={{ width: `${((current + 1) / slides.length) * 100}%` }}
+                transition={{ duration: 0.6 }}
+              />
+            </div>
           </div>
         </motion.div>
       </AnimatePresence>
-
-      {/* Prev / Next controls */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4 z-20">
-        <button
-          onClick={handlePrev}
-          className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center hover:bg-yellow-500 transition"
-        >
-          <ChevronLeft className="text-black" />
-        </button>
-        <button
-          onClick={handleNext}
-          className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center hover:bg-yellow-500 transition"
-        >
-          <ChevronRight className="text-black" />
-        </button>
-      </div>
     </div>
   );
 }
