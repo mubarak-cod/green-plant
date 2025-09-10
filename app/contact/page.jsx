@@ -53,7 +53,7 @@ export default function Contact() {
         {/* Hero */}
         <section className="relative h-[90vh] w-full flex items-center justify-center">
           <Image
-            src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757100508/image_h56awo.png"
+            src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757491985/image_pkpowe.png"
             alt="Contact Background"
             fill
             className="object-cover"
