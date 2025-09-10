@@ -67,7 +67,7 @@ export default function OurServices() {
                 className="relative h-80 w-full rounded-2xl overflow-hidden shadow-xl"
               >
                 <Image
-                  src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757111212/image_h0iu1c.png"
+                  src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757491897/image_xaynfh.png"
                   alt="Diesel Delivery"
                   fill
                   className="object-cover"
