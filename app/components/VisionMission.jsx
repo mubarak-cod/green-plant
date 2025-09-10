@@ -92,7 +92,7 @@ export default function VisionMission() {
           className="relative"
         >
           <Image
-            src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757110746/image_bn3bmc.png"
+            src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757491263/image_ugk7ms.png"
             alt="Energy and sustainability"
             width={600}
             height={400}

@@ -22,19 +22,19 @@ const features = [
     id: 3,
     title: "Nationwide Coverage",
     text: "A reliable logistics network serving homes, offices, and industries across Nigeria.",
-    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757175385/image_vyq7dj.png",
+    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757491623/image_tx5fbl.png",
   },
   {
     id: 4,
     title: "Customer Commitment",
     text: "Transparent operations, responsive support, and services tailored to your needs.",
-    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757175439/image_bz32tw.png",
+    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757491700/image_dczm6l.png",
   },
   {
     id: 5,
     title: "Sustainability Driven",
     text: "Committed to efficiency and greener energy practices as we build the future of energy logistics.",
-    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757175497/image_aiktmc.png",
+    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757491785/image_gbrt9n.png",
   },
 ];
 

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, ShoppingCart, FileText } from "lucide-react";
 import Image from "next/image";
 
+
 const slides = [
   {
     id: 0,
@@ -26,7 +27,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757177961/image_arpiub.png",
+    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757490774/image_fnljsa.png",
     heading: "Premium Quality Fuel",
     text: "Our diesel meets industry standards for performance and efficiency, ensuring your machines, generators, and vehicles run at their best."
   },

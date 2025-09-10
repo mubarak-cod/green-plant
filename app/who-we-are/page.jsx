@@ -136,7 +136,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <Image
-                  src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757100164/image2_tptx9r.png"
+                  src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757491368/image_fsm1nc.png"
                   alt="Fuel delivery truck"
                   width={600}
                   height={400}
