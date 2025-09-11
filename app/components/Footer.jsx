@@ -51,7 +51,7 @@ const Footer = () => {
           <h3 className="text-white font-semibold mb-4">Products</h3>
           <ul className="space-y-2 text-gray-300 text-sm">
             <li>Oil Products</li>
-            <li>Clearing and Forwarding</li>
+            <li>Diesel Delivery</li>
             <li>Container Tracking</li>
           </ul>
         </div>

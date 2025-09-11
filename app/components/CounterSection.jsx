@@ -80,7 +80,7 @@ function CounterCard({ start = 3, target, label, doubleCheck = false }) {
 
 export default function CountersSection() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 px-4 sm:px-6 lg:px-12">
+    <div className="grid grid-cols-1 mt-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 px-4 sm:px-6 lg:px-12">
       {counterData.map((item, idx) => (
         <CounterCard
           key={idx}
