@@ -123,14 +123,14 @@ export default function HowItWorksPage() {
               <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                 <a
                   href="tel:+2348127144292"
-                  className="flex items-center gap-3 bg-green-600 text-white px-8 py-4 rounded-full hover:bg-green-700 transition shadow-lg text-lg"
+                  className="flex items-center gap-3 bg-green-600 text-white px-4 py-4 rounded-full hover:bg-green-700 transition shadow-lg text-sm"
                 >
                   <Phone className="w-5 h-5" />
                   +234 812 714 4292
                 </a>
                 <a
                   href="mailto:greenplantenergyservices@gmail.com"
-                  className="flex items-center gap-3 bg-green-100 text-green-700 text-lg px-8 py-4 rounded-full hover:bg-green-200 transition shadow-lg"
+                  className="flex items-center gap-3 bg-green-100 text-green-700 text-sm px-4 py-4 rounded-full hover:bg-green-200 transition shadow-lg"
                 >
                   <Mail className="w-5 h-5" />
                   greenplantenergyservices@gmail.com

@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const testimonials = [
   {
@@ -43,10 +42,14 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+    <section className="relative py-20 bg-gradient-to-br from-[#228B22] via-[#00A86B] to-gray-900 text-white overflow-hidden">
+      {/* Decorative overlay circles */}
+      <span className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"></span>
+      <span className="absolute bottom-10 right-10 w-40 h-40 bg-green-400/20 rounded-full blur-3xl"></span>
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-gray-800 mb-12"
+          className="text-3xl md:text-4xl font-extrabold mb-12 text-white drop-shadow-lg"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -59,21 +62,14 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
-              className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition"
+              className="bg-white text-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition transform hover:-translate-y-1"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
             >
-              {/* <Image
-                src={t.image}
-                alt={t.name}
-                width={80}
-                height={80}
-                className="rounded-full mb-4 object-cover"
-              /> */}
               <p className="text-gray-600 italic mb-4">“{t.text}”</p>
-              <h4 className="text-lg font-semibold text-gray-800">{t.name}</h4>
+              <h4 className="text-lg font-semibold text-gray-900">{t.name}</h4>
               <span className="text-sm text-gray-500">{t.role}</span>
             </motion.div>
           ))}
