@@ -56,7 +56,7 @@ export default function AboutPage() {
               <p className="text-lg text-gray-700 leading-relaxed">
                 What started as a mission to simplify fuel access has grown into a 
                 company trusted by homes, businesses, and industries nationwide.  
-                From day one, we’ve focused on delivering diesel that’s always on time, 
+                From day one, we have focused on delivering diesel that is always on time, 
                 competitively priced, and backed by professional service.
               </p>
             </div>
@@ -136,7 +136,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <Image
-                  src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757491368/image_fsm1nc.png"
+                  src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757660983/image_pyacg9.png"
                   alt="Fuel delivery truck"
                   width={600}
                   height={400}

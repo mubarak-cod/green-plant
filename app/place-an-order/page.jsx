@@ -107,8 +107,8 @@ export default function Home() {
             </h1>
             <p className="mb-6 text-lg leading-relaxed">
               We specialize in clean, safe, and quality diesel delivery across
-              Lagos. Whether it’s for your home, estate, hotel, hospital, or
-              event, we’ve got you covered.
+              Lagos. Whether it is for your home, estate, hotel, hospital, or
+              event, we have got you covered.
             </p>
             <button
               onClick={scrollToForm}

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
+
 const visionTabs = [
   {
     id: "reliability",
@@ -36,6 +37,7 @@ const visionTabs = [
   },
 ];
 
+
 export default function OurVision() {
   const [activeTab, setActiveTab] = useState("reliability");
 
@@ -63,6 +65,7 @@ export default function OurVision() {
           </p>
         </div>
       </div>
+
 
       {/* Tabs */}
       <div className="max-w-7xl mx-auto px-6 py-16">

@@ -69,22 +69,22 @@ const WhatWeDo = () => {
 
   const items = [
     {
-      src: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757490919/image_blij71.png",
+      src: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757659996/image_kt0pxh.png",
       title: "Diesel Delivery",
       desc: "Safe and prompt delivery of quality diesel to homes, offices, and industries.",
     },
     {
-      src: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757176183/image_qidgwq.png",
+      src: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757660136/image_azknw3.png",
       title: "Bulk Supply",
       desc: "Large-scale diesel supply tailored for factories, hotels, hospitals, and organizations.",
     },
     {
-      src: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757176229/image_a8pmll.png",
+      src: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757660330/image_vxihmt.png",
       title: "Reliable Logistics",
       desc: "Efficient transport and delivery networks across all regions of Nigeria.",
     },
     {
-      src: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757491156/image_haupq5.png",
+      src: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757660415/image_nwwlqm.png",
       title: "Customer-Focused Service",
       desc: "We prioritize client satisfaction with timely updates and responsive support.",
     },
