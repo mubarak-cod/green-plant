@@ -34,7 +34,7 @@ const features = [
     id: 5,
     title: "Sustainability Driven",
     text: "Committed to efficiency and greener energy practices as we build the future of energy logistics.",
-    image: "https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757491785/image_gbrt9n.png",
+    image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757787870/image_hidymg.png",
   },
 ];
 

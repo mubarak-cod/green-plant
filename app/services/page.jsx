@@ -67,7 +67,7 @@ export default function OurServices() {
                 className="relative h-80 w-full rounded-2xl overflow-hidden shadow-xl"
               >
                 <Image
-                  src="https://res.cloudinary.com/dpsxbuxkr/image/upload/v1757491897/image_xaynfh.png"
+                  src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757787437/image_mctbeh.png"
                   alt="Diesel Delivery"
                   fill
                   className="object-cover"
@@ -94,7 +94,7 @@ export default function OurServices() {
                 className="relative h-96 w-full md:w-1/2 rounded-3xl overflow-hidden shadow-2xl"
               >
                 <Image
-                  src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757111343/image_wc3kp4.png"
+                  src="https://res.cloudinary.com/dgznrfgvc/image/upload/v1757787607/image_oyfjsu.png"
                   alt="Bulk Supply"
                   fill
                   className="object-cover"
@@ -127,20 +127,27 @@ export default function OurServices() {
                 Reliable Logistics
               </h2>
               <p className="text-lg text-gray-700 mb-12">
-                Our well-connected transport network spans Nigeria’s key regions,
-                ensuring timely supply and real-time tracking.
+                We handle every stage of the diesel supply chain — from safe storage
+                to timely transportation — with a focus on efficiency, security, and
+                transparency. Our logistics network keeps your operations powered
+                without delays.
               </p>
               <div className="grid sm:grid-cols-3 gap-8">
-                {["Planning", "Distribution", "Support"].map((step, i) => (
+                {[
+                  {
+                    title: "Supply Planning",
+                    desc: "Strategic scheduling and inventory management ensure you never run out of diesel when it matters most."
+                  },
+                  { title: "Nationwide Delivery", desc: "Dedicated tankers and a robust fleet provide fast and safe transport across Nigeria." },
+                  { title: "Real-Time Tracking", desc: "Monitor your fuel movement from dispatch to delivery for complete peace of mind." }
+                ].map((service, i) => (
                   <motion.div
                     key={i}
                     whileHover={{ y: -8, scale: 1.05 }}
                     className="p-6 bg-green-50 rounded-2xl shadow-md hover:shadow-xl transition"
                   >
-                    <h3 className="text-2xl font-semibold text-green-600">{step}</h3>
-                    <p className="text-gray-600 mt-2">
-                      {step} services that ensure your energy reaches where it matters most.
-                    </p>
+                    <h3 className="text-2xl font-semibold text-green-600">{service.title}</h3>
+                    <p className="text-gray-600 mt-2">{service.desc}</p>
                   </motion.div>
                 ))}
               </div>
