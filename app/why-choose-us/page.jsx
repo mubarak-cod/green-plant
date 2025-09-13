@@ -32,11 +32,12 @@ const features = [
   },
   {
     id: 5,
-    title: "Sustainability Driven",
-    text: "Committed to efficiency and greener energy practices as we build the future of energy logistics.",
+    title: "Reliable Diesel Supply",
+    text: "Delivering high-quality diesel with consistency, efficiency, and transparency — powering industries, businesses, and communities nationwide.",
     image: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757787870/image_hidymg.png",
   },
 ];
+
 
 const WhyChooseUs = () => {
   return (
