@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
+import { Truck, CreditCard, Ban, AlertTriangle, Calendar, Clock } from "lucide-react";
 
 export default function Home() {
   const formRef = useRef(null);
@@ -180,14 +181,13 @@ export default function Home() {
                 type="submit"
                 disabled={loading}
                 className={`w-full flex items-center justify-center py-3 rounded-lg font-semibold text-lg shadow-md transition 
-                  ${
-                    status === "success"
-                      ? "bg-green-700 text-white"
-                      : status === "error"
+                  ${status === "success"
+                    ? "bg-green-700 text-white"
+                    : status === "error"
                       ? "bg-red-600 text-white"
                       : loading
-                      ? "bg-gray-400 text-white cursor-not-allowed"
-                      : "bg-green-600 hover:bg-green-700 text-white"
+                        ? "bg-gray-400 text-white cursor-not-allowed"
+                        : "bg-green-600 hover:bg-green-700 text-white"
                   }`}
               >
                 {loading ? (
@@ -236,31 +236,73 @@ export default function Home() {
         </section>
 
         {/* Info Section */}
-        <section className="max-w-3xl mx-auto px-4 py-12 text-gray-700 space-y-4">
-          <h3 className="text-xl font-bold">Important Information</h3>
-          <ul className="list-disc pl-5 space-y-2">
-            <li>
-              Delivery 🚚 is not free and varies by location and quantity. At
-              least 24 hours' notice for scheduling and dispatch.
-            </li>
-            <li>
-              Payment validates your order—we only confirm delivery after
-              payment is received.
-            </li>
-            <li>🚫 No cash allowed. ✅ Bank Transfers only.</li>
-            <li>
-              ‼ No refunds will be issued for deliveries that have already been
-              made.
-            </li>
-            <li>
-              Diesel deliveries will be made according to the scheduled date and
-              time agreed upon by both parties.
-            </li>
-            <li>
-              Any delays or changes in the schedule must be communicated and
-              agreed upon at least 24 hours in advance.
-            </li>
-          </ul>
+        <section className="max-w-5xl mx-auto px-6 py-16">
+          <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-10">
+            Important Information
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Delivery */}
+            <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
+              <div className="p-3 bg-green-100 rounded-xl text-green-700">
+                <Truck size={24} />
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Delivery is not free 🚚 and varies by location and quantity.
+                At least <span className="font-semibold">24 hours’ notice</span> is required for scheduling and dispatch.
+              </p>
+            </div>
+
+            {/* Payment */}
+            <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
+              <div className="p-3 bg-blue-100 rounded-xl text-blue-700">
+                <CreditCard size={24} />
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                <span className="font-semibold">Payment validates your order</span> — we only confirm delivery after payment is received.
+              </p>
+            </div>
+
+            {/* No Cash */}
+            <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
+              <div className="p-3 bg-red-100 rounded-xl text-red-700">
+                <Ban size={24} />
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                 No cash allowed.  <span className="font-semibold">Bank Transfers only.</span>
+              </p>
+            </div>
+
+            {/* No Refunds */}
+            <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
+              <div className="p-3 bg-yellow-100 rounded-xl text-yellow-700">
+                <AlertTriangle size={24} />
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+               <span className="font-semibold">No refunds</span> will be issued for deliveries that have already been made.
+              </p>
+            </div>
+
+            {/* Scheduled Deliveries */}
+            <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
+              <div className="p-3 bg-purple-100 rounded-xl text-purple-700">
+                <Calendar size={24} />
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Diesel deliveries will be made according to the <span className="font-semibold">scheduled date and time</span> agreed upon by both parties.
+              </p>
+            </div>
+
+            {/* Changes in Schedule */}
+            <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
+              <div className="p-3 bg-orange-100 rounded-xl text-orange-700">
+                <Clock size={24} />
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Any delays or changes in the schedule must be communicated and agreed upon at least <span className="font-semibold">24 hours in advance</span>.
+              </p>
+            </div>
+          </div>
         </section>
       </main>
       <Footer />

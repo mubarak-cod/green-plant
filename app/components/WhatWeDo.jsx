@@ -69,7 +69,7 @@ const WhatWeDo = () => {
 
   const items = [
     {
-      src: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757659996/image_kt0pxh.png",
+      src: "https://res.cloudinary.com/dgznrfgvc/image/upload/v1757887147/image_shg5ew.png",
       title: "Diesel Delivery",
       desc: "Safe and prompt delivery of quality diesel to homes, offices, and industries.",
     },
